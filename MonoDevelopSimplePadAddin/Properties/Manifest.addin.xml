@@ -19,7 +19,7 @@
 			defaultPlacement="Center Bottom"
 			defaultStatus="AutoHide"
 			icon="md-console"
-			class="MonoDevelopSimplePadAddin.SimplePad"
+			class="MonoDevelopSimplePadAddin.SimpleTreeViewPad"
 			_label="Simple pad addin" />
 	</Extension>
 </Addin>
