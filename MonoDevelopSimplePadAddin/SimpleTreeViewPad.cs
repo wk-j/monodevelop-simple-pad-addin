@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using MonoDevelop.Ide;
 using MonoDevelop.Ide.Gui.Components;
 using MonoDevelop.Ide.Gui.Pads;
@@ -12,10 +13,11 @@ namespace MonoDevelopSimplePadAddin {
 		public override void Initialize(NodeBuilder[] builders, TreePadOption[] options, string menuPath) {
 			base.Initialize(builders, options, menuPath);
 
-			//foreach (WorkspaceItem it in IdeApp.Workspace.Items)
-			var it = new TreeViewItem("Hello", Gtk.Stock.New);
+			var range = Enumerable.Range(0, 10).ToList();
+			range.ForEach(x => {
+				var it = new TreeViewItem($"Hello {x+1}", Gtk.Stock.New);
 				treeView.AddChild(it);
-
+			});
 		}
 		protected virtual void OnOpenWorkspace(object sender, WorkspaceItemEventArgs e) {
 			//treeView.AddChild(e.Item);
