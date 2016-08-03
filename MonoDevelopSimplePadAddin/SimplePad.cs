@@ -1,14 +1,15 @@
 ﻿
 using System;
+using MonoDevelop.Components;
 using MonoDevelop.Ide.Gui;
 
 namespace MonoDevelopSimplePadAddin
 {
-	public class SimplePad : IPadContent
+	public class SimplePad : PadContent 
 	{
 		Gtk.Label label;
 
-		public void Initialize (IPadWindow window)
+		public new void Initialize (IPadWindow window)
 		{
 			label = new Gtk.Label ("Simple pad label");
 			label.Visible = true;
@@ -18,12 +19,13 @@ namespace MonoDevelopSimplePadAddin
 		{
 		}
 
-		public Gtk.Widget Control {
+		public override Control Control {
 			get { return label; }
 		}
 
-		public void Dispose ()
+		public override void Dispose ()
 		{
+
 		}
 	}
 }
