@@ -13,10 +13,10 @@
 	</Runtime>
 		
 	<Extension path="/MonoDevelop/Ide/Pads">
-		<Pad
+		<SolutionPad
 			id="SimplePad"
 			defaultLayout="*"
-			defaultPlacement="Center Bottom"
+			defaultPlacement="Left"
 			defaultStatus="AutoHide"
 			icon="md-console"
 			class="MonoDevelopSimplePadAddin.SimpleTreeViewPad"
